@@ -11,8 +11,8 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 
 " vim-airline
-nmap <C-p> <Plug>AirlineSelectPrevTab
-nmap <C-n> <Plug>AirlineSelectNextTab
+"nmap <C-p> <Plug>AirlineSelectPrevTab
+"nmap <C-n> <Plug>AirlineSelectNextTab
 
 " deol.vim
 nnoremap <silent><C-o> :<C-u>Deol -split=floating<CR>
