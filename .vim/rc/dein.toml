@@ -1,2 +1,23 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+marged = 0
+hook_add = '''
+    source ~/.vim/rc/plugins/coc.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+    source ~/.vim/rc/plugins/snippet.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+hook_add = '''
+
+'''
+
