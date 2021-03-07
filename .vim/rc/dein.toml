@@ -12,7 +12,7 @@ repo = 'vim-airline/vim-airline'
 merged = 0
 depends = ['vim-airline-themes']
 hook_add = '''
-	source ~/.vim/rc/plugins/airline.rc.vim
+    source ~/.vim/rc/plugins/airline.rc.vim
 '''
 
 [[plugins]]

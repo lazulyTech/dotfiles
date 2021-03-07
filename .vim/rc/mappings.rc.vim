@@ -1,14 +1,14 @@
-inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+"inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 
-set completeopt=menuone,noinsert
+"set completeopt=menuone,noinsert
 "inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
 "inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
 
-imap [ []<left>
-imap ( ()<left>
-imap { {}<left>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
+"imap [ []<left>
+"imap ( ()<left>
+"imap { {}<left>
+"inoremap " ""<LEFT>
+"inoremap ' ''<LEFT>
 
 " vim-airline
 nmap <C-p> <Plug>AirlineSelectPrevTab
