@@ -96,3 +96,12 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+let g:coc_global_extensions = [
+      \  'coc-neosnippet'
+      \, 'coc-json'
+      \, 'coc-vimlsp'
+      \, 'coc-clangd'
+      \, 'coc-cmake'
+      \, 'coc-toml'
+      \, ]
+
