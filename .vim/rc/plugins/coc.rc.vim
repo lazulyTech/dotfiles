@@ -1,6 +1,9 @@
 " coc-pairs settings
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<tab><backspace>"
 
+" coc-explorer settings
+"nnoremap <space>e :CocCommand explorer<CR>
+
 " coc.nvim settings
 "     see https://github.com/neoclide/coc.nvim
 inoremap <silent><expr> <TAB>
@@ -100,12 +103,13 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 let g:coc_global_extensions = [
-      \  'coc-neosnippet'
-      \, 'coc-pairs'
-      \, 'coc-json'
-      \, 'coc-vimlsp'
-      \, 'coc-clangd'
-      \, 'coc-cmake'
-      \, 'coc-toml'
-      \, ]
+    \  'coc-neosnippet'
+    \, 'coc-explorer'
+    \, 'coc-pairs'
+    \, 'coc-json'
+    \, 'coc-vimlsp'
+    \, 'coc-clangd'
+    \, 'coc-cmake'
+    \, 'coc-toml'
+    \, ]
 
