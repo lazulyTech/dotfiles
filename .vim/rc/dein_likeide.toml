@@ -7,3 +7,19 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/deol.nvim'
 
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+hook_add = '''
+    let g:winresizer_vert_resize = 1
+    let g:winresizer_horiz_resize = 1
+'''
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+    let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
+'''
+
