@@ -15,8 +15,7 @@ if dein#load_state(s:dein_dir)
     
     "add setting files
     call dein#load_toml(s:rc_dir.'/dein.toml',         {'lazy': 0})
-
-"    call dein#load_toml(s:rc_dir.'/dein_syntax.toml',  {'lazy': 1})
+    call dein#load_toml(s:rc_dir.'/dein_likeide.toml', {'lazy': 1})
 
     call dein#end()
     call dein#save_state()

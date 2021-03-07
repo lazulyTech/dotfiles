@@ -1,0 +1,9 @@
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+    let g:NERDTreeShowHidden=1
+'''
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+
