@@ -1,0 +1,25 @@
+#Tamplate for atcoder
+snippet     atc
+abbr        #include <bits/stdc++.h> using namespace std;...
+options     head
+    #include <bits/stdc++.h>
+    using namespace std;
+    
+    int main(){
+        ${0:TARGET}
+    return 0;
+    }
+    
+#std::cin
+snippet     cin
+abbr        cin >> 
+options     head
+    cin >> ${0:TARGET};
+    
+
+#std::cout
+snippet     cout
+abbr        cout endl;
+options     head
+    cout << ${0:TARGET} << endl;
+
