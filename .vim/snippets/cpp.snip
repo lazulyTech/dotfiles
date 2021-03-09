@@ -5,7 +5,7 @@ options     head
     #include <bits/stdc++.h>
     using namespace std;
     
-    int main(){
+    int main() {
         ${0:TARGET}
     return 0;
     }
@@ -22,4 +22,67 @@ snippet     cout
 abbr        cout endl;
 options     head
     cout << ${0:TARGET} << endl;
+
+#snippet from https://qiita.com/xryuseix/items/7e9b4c6f12d001a0c0db
+snippet     gcd
+abbr        lli gcd(a,b)
+options     head
+    long long int gcd(long long int a, long long int b) {
+        return b ? gcd(b, a%b) : a;
+    }
+
+snippet     lcm
+abbr        lli lcm(a,b)
+options     head
+    long long int lcm(long long int a, long long int b) {
+        return a / gcd(a,b) * b;
+    }
+
+snippet     isPrime
+abbr        bool isPrime(x)
+options     head
+    bool isPrime(long long int x) {
+        long long int i;
+        if (x < 2) return 0;
+        else if (x == 2) return 1;
+        if (x%2 == 0) return 0;
+        for (i = 3; i*i <= x; i+=2) if(x%i == 0) return 0;
+        return 1;
+    }
+
+snippet     digSum
+abbr        lli digSum(n,num)
+options     head
+    long long int digSum(long long int n, bool num){
+        long long int res = 0;
+        while (n > 0) {
+            if (!num) {
+                res+= n%10;
+            } else {
+                res+=1;
+            }
+            n/=10;
+        }
+        return res;
+    }
+
+snippet     pow_mod
+abbr        lli pow_mod(x,n,mod)
+options     head
+    long long int pow_mod(long long int x, long long int n, long long int mod) {
+        long long res = 1;
+        while (n > 0) {
+            if(n & 1) res = res*x%mod;
+            x = x*x%mod;
+            n >>= 1;
+        }
+        return res;
+    }
+
+snippet     strCount
+abbr        lli strCount(s,c)
+options     head
+    long long int strCount(string s,char c) {
+        return count(s.cbegin(), s.cend(), c);
+    }
 
