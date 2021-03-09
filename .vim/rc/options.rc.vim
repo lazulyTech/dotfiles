@@ -24,6 +24,8 @@ set mouse=a
 
 set noswapfile
 
+let g:tex_flavor = "latex"
+
 "autosave setting (not plugin)
 augroup vimrc-auto-save
   autocmd!

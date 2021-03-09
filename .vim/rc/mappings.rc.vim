@@ -20,6 +20,9 @@ nmap <C-n> <Plug>AirlineSelectNextTab
 nnoremap <silent><C-o> :<C-u>Deol -split=floating<CR>
 tnoremap <ESC>   <C-\><C-n>
 
+"vimtex 
+let maplocalleader=' '
+
 " neosnippet.vim settings
 "     see ~/.vim/rc/plugins/snippet.rc.vim
 

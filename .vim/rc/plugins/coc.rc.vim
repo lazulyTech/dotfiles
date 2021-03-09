@@ -111,5 +111,6 @@ let g:coc_global_extensions = [
     \, 'coc-clangd'
     \, 'coc-cmake'
     \, 'coc-toml'
+    \, 'coc-vimtex'
     \, ]
 
