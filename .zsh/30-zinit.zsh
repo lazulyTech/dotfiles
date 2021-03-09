@@ -10,7 +10,7 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-source ~/.zsh.d/plugins/plugins.zsh
+source ~/.zsh/plugins/plugins.zsh
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -26,5 +26,5 @@ zinit light-mode for \
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #plugin settings
-source ~/.zsh.d/plugins/plugsetting.zsh
+source ~/.zsh/plugins/plugsetting.zsh
 

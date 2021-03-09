@@ -7,7 +7,7 @@ fi
 
 
 # Load external setting files
-ZSHHOME="${HOME}/.zsh.d"
+ZSHHOME="${HOME}/.zsh"
 source ${ZSHHOME}/10-path.zsh
 source ${ZSHHOME}/20-alias.zsh
 source ${ZSHHOME}/30-zinit.zsh
