@@ -24,12 +24,11 @@ set mouse=a
 
 set noswapfile
 
-" Start NERDTree and put the cursor back in the other window.
-"autocmd VimEnter * NERDTree | wincmd p
-" Exit Vim if NERDTree is the only window left.
-"autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && "exists('b:NERDTree') && b:NERDTree.isTabTree() |
-"            \ quit | endif
-
+"autosave setting (not plugin)
+augroup vimrc-auto-save
+  autocmd!
+  autocmd InsertLeave * w
+augroup END
 
 " coc.nvim setting
 "    see 
