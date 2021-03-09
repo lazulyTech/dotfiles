@@ -1,12 +1,10 @@
 # My Cheat Sheet
 
-###Window
-- 'ss'      : 横に分割
-- 'sv'      : 縦に分割
-- 'sh'      : 左のウィンドウに移動
-- 'sj'      : 下のウィンドウに移動
-- 'sk'      : 上のウィンドウに移動
-- 'sl'      : 右のウィンドウに移動
-- '<C-e>'   : 幅調整モード
-- ':Cheat'  : この.cheatsheet.mdを開く
+##Window
+- ':sp'            : 横に分割
+- ':vs'            : 縦に分割
+- '<C-e>'          : 幅調整モード
+- ':NERDTree'      : nerdtreeを開く
+- ':NERDTreeClose' : nerdtreeを閉じる
+- ':Cheat'         : この.cheatsheet.mdを開く
 
