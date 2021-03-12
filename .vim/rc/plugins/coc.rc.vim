@@ -1,3 +1,15 @@
+let g:coc_global_extensions = [
+    \  'coc-neosnippet'
+    \, 'coc-explorer'
+    \, 'coc-pairs'
+    \, 'coc-json'
+    \, 'coc-vimlsp'
+    \, 'coc-clangd'
+    \, 'coc-cmake'
+    \, 'coc-toml'
+    \, 'coc-texlab'
+    \, ]
+
 " coc-pairs settings
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>\<tab><backspace>"
 
@@ -101,16 +113,4 @@ nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-
-let g:coc_global_extensions = [
-    \  'coc-neosnippet'
-    \, 'coc-explorer'
-    \, 'coc-pairs'
-    \, 'coc-json'
-    \, 'coc-vimlsp'
-    \, 'coc-clangd'
-    \, 'coc-cmake'
-    \, 'coc-toml'
-    \, 'coc-vimtex'
-    \, ]
 
