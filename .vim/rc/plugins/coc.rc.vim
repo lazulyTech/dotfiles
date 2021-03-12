@@ -9,6 +9,7 @@ let g:coc_global_extensions = [
     \, 'coc-toml'
     \, 'coc-texlab'
     \, 'coc-html', 'coc-css'
+    \, 'coc-markdownlint'
     \, ]
 
 " coc-pairs settings
