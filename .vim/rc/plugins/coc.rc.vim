@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
     \, 'coc-cmake'
     \, 'coc-toml'
     \, 'coc-texlab'
+    \, 'coc-html', 'coc-css'
     \, ]
 
 " coc-pairs settings
@@ -15,6 +16,12 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR
 
 " coc-explorer settings
 "nnoremap <space>e :CocCommand explorer<CR>
+
+" coc-html settings
+augroup HTMLTAGCOMP
+    autocmd!
+    autocmd FileType html inoremap <buffer> </ </<C-x><C-o><ESC>F<i
+augroup END
 
 " coc.nvim settings
 "     see https://github.com/neoclide/coc.nvim
