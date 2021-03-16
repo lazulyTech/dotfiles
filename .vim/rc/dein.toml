@@ -59,3 +59,9 @@ hook_add = '''
 
 '''
 
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+source ~/.vim/rc/plugins/ale.rc.vim
+'''
+

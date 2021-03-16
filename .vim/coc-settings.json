@@ -11,5 +11,6 @@
         "<cr>": ["expandable?", "expand", "open"],
         "v": "open:vsplit"
     },
-    "coc.preferences.formatOnType": false
+    "coc.preferences.formatOnType": false,
+    "diagnostic.displayByAle": true
 }
