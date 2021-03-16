@@ -26,11 +26,11 @@ set noswapfile
 
 let g:tex_flavor = "latex"
 
-"autosave setting (not plugin)
-augroup vimrc-auto-save
-  autocmd!
-  autocmd InsertLeave * w
-augroup END
+""autosave setting (not plugin)
+"augroup vimrc-auto-save
+"  autocmd!
+"  autocmd InsertLeave * w
+"augroup END
 
 " coc.nvim setting
 "    see 
