@@ -14,7 +14,7 @@ set showcmd
 
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set noexpandtab
 set tabstop=4
 set smarttab
 
