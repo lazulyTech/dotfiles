@@ -8,9 +8,6 @@
 repo = 'Shougo/deol.nvim'
 
 [[plugins]]
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
     let g:winresizer_vert_resize = 1
