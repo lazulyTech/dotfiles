@@ -37,6 +37,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'sheerun/vim-polyglot'
 
 [[plugins]]
