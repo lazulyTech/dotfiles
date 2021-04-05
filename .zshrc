@@ -11,3 +11,5 @@ ZSHHOME="${HOME}/.zsh"
 source ${ZSHHOME}/10-path.zsh
 source ${ZSHHOME}/20-alias.zsh
 source ${ZSHHOME}/30-zinit.zsh
+source ${ZSHHOME}/40-options.zsh
+
