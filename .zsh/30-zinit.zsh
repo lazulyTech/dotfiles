@@ -10,7 +10,7 @@ fi
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-source ~/.zsh/plugins/plugins.zsh
+source ~/.zsh/plugins.zsh
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
