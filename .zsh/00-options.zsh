@@ -1,5 +1,5 @@
 ## 履歴保存管理
-HISTFILE=$ZDOTDIR/.zsh-history
+HISTFILE=~/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
 
