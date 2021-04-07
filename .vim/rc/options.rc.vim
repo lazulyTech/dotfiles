@@ -52,3 +52,5 @@ else
     set signcolumn=yes
 endif
 
+set rtp+=/opt/homebrew/opt/fzf
+
