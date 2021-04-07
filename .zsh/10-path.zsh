@@ -1,5 +1,7 @@
 # setting for tools from homebrew
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+alias brew='PATH=/opt/homebrew/bin:/usr/bin:/bin:/opt/homebrew/sbin:/sbin brew' 
 
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"

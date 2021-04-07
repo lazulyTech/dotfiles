@@ -1,7 +1,7 @@
 #[[plugins]]
 #repo = 'preservim/nerdtree'
 #hook_add = '''
-#    let g:NERDTreeShowHidden=1
+#	 let g:NERDTreeShowHidden=1
 #'''
 
 [[plugins]]
@@ -10,14 +10,23 @@ repo = 'Shougo/deol.nvim'
 [[plugins]]
 repo = 'simeji/winresizer'
 hook_add = '''
-    let g:winresizer_vert_resize = 1
-    let g:winresizer_horiz_resize = 1
-    nnoremap <silent><nowait> sw :<C-u>WinResizerStartResize<cr>
+	let g:winresizer_vert_resize = 1
+	let g:winresizer_horiz_resize = 1
+	nnoremap <silent><nowait> sw :<C-u>WinResizerStartResize<cr>
+'''
+
+[[plugins]]
+repo = 'twitvim/twitvim'
+hook_add = '''
+	let twitvim_browser_cmd = 'open' " for Mac
+	let twitvim_browser_cmd = 'C:¥Program Files¥Your_Browser_Path' " for Windows
+	let twitvim_force_ssl = 1 
+	let twitvim_count = 40
 '''
 
 #[[plugins]]
 #repo = 'reireias/vim-cheatsheet'
 #hook_add = '''
-#    let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
+#	 let g:cheatsheet#cheat_file = '~/.vim/cheatsheet.md'
 #'''
 
