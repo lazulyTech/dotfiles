@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
 	\, 'coc-texlab'
 	\, 'coc-html', 'coc-css'
 	\, 'coc-markdownlint'
+	\, 'coc-emoji'
 	\, 'coc-python', 'coc-jedi'
 	\, 'coc-solargraph'
 	\, ]
