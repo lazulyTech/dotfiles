@@ -8,8 +8,12 @@ fi
 
 # Load external setting files
 ZSHHOME="${HOME}/.zsh"
+ZSHPRIVATE="${HOME}/.dotfiles_private/.zsh"
 source ${ZSHHOME}/00-options.zsh
 source ${ZSHHOME}/10-path.zsh
 source ${ZSHHOME}/20-alias.zsh
 source ${ZSHHOME}/30-zinit.zsh
+source ${ZSHPRIVATE}/ssh_alias.zsh
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
