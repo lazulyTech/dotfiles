@@ -70,13 +70,14 @@ source ~/.vim/rc/plugins/ale.rc.vim
 
 [[plugins]]
 repo = 'junegunn/fzf'
-hook_post_update = './install --all'
+#hook_post_update = './install --all'
 merged = 0
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
+    set rtp+=/opt/homebrew/opt/fzf
     command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \ 'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
