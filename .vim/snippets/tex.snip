@@ -1,0 +1,47 @@
+#template
+snippet     report
+abbr        report template
+options     head
+    \documentclass[dvipdfmx]{jsarticle}
+    \usepackage{graphicx}
+    \usepackage{amsmath}
+    \usepackage{ascmac}
+    \usepackage{siunitx}
+    \usepackage[version=3]{mhchem}
+    \usepackage{url}
+    \usepackage{comment}
+    \usepackage{bm}
+    \usepackage{enumerate}
+    \usepackage{chemfig}
+    
+    \setlength{\textheight}{\paperheight}
+    \setlength{\topmargin}{-5.4truemm}
+    \addtolength{\topmargin}{-\headheight}
+    \addtolength{\topmargin}{-\headsep}
+    \addtolength{\textheight}{-40truemm}
+    
+    \setlength{\textwidth}{\paperwidth}
+    \setlength{\oddsidemargin}{-5.4truemm}
+    \setlength{\evensidemargin}{-5.4truemm}
+    \addtolength{\textwidth}{-40truemm}
+    
+    \setlength{\abovedisplayskip}{7mm}
+    \setlength{\belowdisplayskip}{7mm}
+    
+    \AtBeginDocument{
+    	\abovedisplayskip     =0.5\abovedisplayskip
+    	\abovedisplayshortskip=1.5\abovedisplayshortskip
+    	\belowdisplayskip     =2.5\belowdisplayskip
+    	\belowdisplayshortskip=1.5\belowdisplayshortskip
+    }
+    
+    \title{${1:TARGET}}
+    \author{電気通信大学 ${2:TARGET}}
+    \date{${3:TARGET} 提出}
+    
+    \begin{document}
+    \maketitle
+    	\section{${4:TARGET}}
+        	${5:TARGET}
+    \end{document}
+

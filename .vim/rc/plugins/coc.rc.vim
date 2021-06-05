@@ -13,6 +13,7 @@ let g:coc_global_extensions = [
 	\, 'coc-emoji'
 	\, 'coc-python', 'coc-jedi'
 	\, 'coc-solargraph'
+	\, 'coc-sh'
 	\, ]
 
 " coc-pairs settings
