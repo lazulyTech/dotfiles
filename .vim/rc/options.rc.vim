@@ -25,6 +25,7 @@ set mouse=a
 set noswapfile
 
 let g:tex_flavor = "latex"
+let g:tex_conceal = ''
 
 ""autosave setting (not plugin)
 "augroup vimrc-auto-save
@@ -53,4 +54,9 @@ else
 endif
 
 set rtp+=/opt/homebrew/opt/fzf
+
+augroup vimrc
+	autocmd!
+	autocmd BufWritePost *.tex !ptex2pdf -l main.tex %:p
+augroup END
 
