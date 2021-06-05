@@ -2,26 +2,26 @@
 snippet     atc
 abbr        #include <bits/stdc++.h> using namespace std;...
 options     head
+    #include <algorithm>
     #include <iostream>
     #include <iomanip>
-    #include <vector>
-    #include <cmath>
-    #include <algorithm>
-    #include <deque>
-    #include <set>
-    #include <limits>
+    #include <math.h>
+    #include <stdio.h>
     #include <string>
+    #include <sstream>
+    #include <vector>
+    #include <set>
     #include <map>
-    #include <unordered_map>
-    #include <unordered_set>
-    #include <list>
-    #include <numeric>
-    #include <bitset>
+    #include <stack>
+    #include <cmath>
+    #include <iterator>
+    #include <queue>
+    #define ll long long
     
     using namespace std;
     
     int main() {
-        ${0:TARGET}
+    ${0:TARGET}
     return 0;
     }
     
@@ -85,7 +85,7 @@ snippet     pow_mod
 abbr        lli pow_mod(x,n,mod)
 options     head
     long long int pow_mod(long long int x, long long int n, long long int mod) {
-        long long res = 1;
+        long long int res = 1;
         while (n > 0) {
             if(n & 1) res = res*x%mod;
             x = x*x%mod;
