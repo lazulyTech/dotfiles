@@ -4,7 +4,7 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
 hook_add = '''
-    source ~/.dotfiles/.vim/rc/plugins/color.rc.vim
+    source ~/dotfiles/.vim/rc/plugins/color.rc.vim
 '''
 
 [[plugins]]
