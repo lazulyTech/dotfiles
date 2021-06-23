@@ -69,12 +69,42 @@
 		{\Large{\bf レポートタイトル}} \\
 		{\bf 電気通信大学 1年\\
 		2110000 氏名} \\
-		{\bf \today 作成}% \\
+		{\bf \number\year 年\number\month 月\number\day 日 作成}% \\
 		%{\bf 20YY年X月X日更新}
 	\end{center}
 	
-	\section{セクション}
-		　内容
+	\section{実験の目的}
+	
+	\section{実験の原理}
+
+	\section{実験の方法}
+	
+	\section{実験結果}
+
+	\section{考察}
+	
+	\section{感想}
+
+	%参考文献
+	\begin{thebibliography}{99}
+		\bibitem{bi:1} これこれ
+	\end{thebibliography}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\appendix
+	\setcounter{figure}{0}
+	\setcounter{table}{0}
+	\numberwithin{equation}{section}
+	\renewcommand{\thetable}{\Alph{section}\arabic{table}}
+	\renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
+	%\def\thesection{付録\Alph{section}}
+	\makeatletter 
+	\newcommand{\section@cntformat}{付録 \thesection:\ }
+	\makeatother
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\section{付録}
 	
 \end{document}
 

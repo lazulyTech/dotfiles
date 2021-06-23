@@ -57,6 +57,6 @@ set rtp+=/opt/homebrew/opt/fzf
 
 augroup vimrc
 	autocmd!
-	autocmd BufWritePost *.tex !ptex2pdf -l main.tex %:p
+	autocmd BufWritePost *.tex !pwd ; ptex2pdf -l *.tex ; open *.pdf -a /Applications/Skim.app/Contents/MacOS/Skim
 augroup END
 
