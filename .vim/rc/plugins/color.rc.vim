@@ -3,7 +3,7 @@ syntax on
 set t_Co=256
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-au MyAutoCmd VimEnter * nested colorscheme iceberg
+au MyAutoCmd VimEnter * nested colorscheme molokai
 
 augroup TransparentBG
     autocmd!
@@ -14,4 +14,4 @@ augroup TransparentBG
     autocmd Colorscheme * highlight EndOfBuffer ctermbg=none 
 augroup END
 
-colorscheme iceberg
+"colorscheme molokai
