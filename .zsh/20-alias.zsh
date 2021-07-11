@@ -3,6 +3,7 @@ alias ntex="nvim *.tex"
 alias cl21tex="platex *.tex ; dvipdfmx -V4 *.dvi"
 alias ls="ls -Gl"
 alias d="~/dotfiles"
+alias cl="clear"
 
 #git alias
 alias g='git'
