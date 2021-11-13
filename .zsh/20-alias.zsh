@@ -1,9 +1,12 @@
 alias jxa="osascript -l JavaScript"
+#alias python="python3"
 alias ntex="nvim *.tex"
 alias cl21tex="platex *.tex ; dvipdfmx -V4 *.dvi"
+alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
 alias ls="ls -Gl"
 alias d="~/dotfiles"
 alias cl="clear"
+alias so="source ~/.zshrc"
 
 #git alias
 alias g='git'

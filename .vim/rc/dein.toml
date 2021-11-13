@@ -28,6 +28,12 @@ hook_add = '''
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
+repo = 'mhinz/vim-startify'
+hook_add = '''
+	source ~/.vim/rc/plugins/startify.rc.vim
+'''
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
     set signcolumn=yes
@@ -50,13 +56,13 @@ repo = 'neoclide/coc.nvim'
 rev = 'release'
 #marged = 0
 hook_add = '''
-    source ~/.vim/rc/plugins/coc.rc.vim
+	source ~/.vim/rc/plugins/coc.rc.vim
 '''
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 hook_add = '''
-    source ~/.vim/rc/plugins/snippet.rc.vim
+	source ~/.vim/rc/plugins/snippet.rc.vim
 '''
 
 [[plugins]]
@@ -68,7 +74,7 @@ hook_add = '''
 [[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = '''
-source ~/.vim/rc/plugins/ale.rc.vim
+	source ~/.vim/rc/plugins/ale.rc.vim
 '''
 
 [[plugins]]
@@ -80,15 +86,7 @@ merged = 0
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-    set rtp+=/opt/homebrew/opt/fzf
-    command! -bang -nargs=* Rg
-    \ call fzf#vim#grep(
-    \ 'rg --column --line-number --hidden --ignore-case --no-heading --color=always '.shellescape(<q-args>), 1,
-    \ <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
-    \ : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
-    \ <bang>0)
-    "nnoremap <C-g> :Rg<Space>
-    "nnoremap <C-p> :GFiles<CR>
-    "nnoremap <C-h> :History<CR>
+	set rtp+=/opt/homebrew/opt/fzf
+	source ~/.vim/rc/plugins/fzf.rc.vim
 '''
 

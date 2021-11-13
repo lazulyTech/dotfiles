@@ -4,6 +4,10 @@
 "inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
 "inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
 
+"search
+set hlsearch
+nnoremap <silent> <Esc><Esc> :<C-u>nohlsearch<CR>
+
 "sprit window
 nnoremap sj <C-w>j
 nnoremap sk <C-w>k

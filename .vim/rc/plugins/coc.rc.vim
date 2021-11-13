@@ -14,6 +14,7 @@ let g:coc_global_extensions = [
 	\, 'coc-python', 'coc-jedi'
 	\, 'coc-solargraph'
 	\, 'coc-sh'
+	\, 'coc-tsserver'
 	\, ]
 
 " coc-pairs settings

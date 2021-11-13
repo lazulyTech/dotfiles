@@ -42,23 +42,23 @@ export CPLUS_INCLUDE_PATH=/usr/local/include
 
 export PATH="/usr/local/bin:$PATH"
 
-#pyenv settings
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH=$PATH:$PYENV_ROOT/bin
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
-# Load pyenv into the shell by adding
-# the following to ~/.zshrc:
-
-eval "$(pyenv init -)"
-
-# Make sure to restart your entire logon session
-# for changes to profile files to take effect.
+##pyenv settings
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH=$PATH:$PYENV_ROOT/bin
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
+#
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
+#
+## Load pyenv into the shell by adding
+## the following to ~/.zshrc:
+#
+#eval "$(pyenv init -)"
+#
+## Make sure to restart your entire logon session
+## for changes to profile files to take effect.
 
 #rbenv settings
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
@@ -80,9 +80,15 @@ typeset -U LDFLAGS
 typeset -U CPPFLAGS
 typeset -U PKG_CONFIG_PATH
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init --path)"
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
+
+# original binaly script path
+export PATH="$HOME/bin:$PATH"
+
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
