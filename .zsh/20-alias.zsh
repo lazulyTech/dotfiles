@@ -1,7 +1,7 @@
 alias jxa="osascript -l JavaScript"
 #alias python="python3"
 alias ntex="nvim *.tex"
-alias cl21tex="platex *.tex ; dvipdfmx -V4 *.dvi"
+alias jbtex="platex *.tex ; dvipdfmx -V4 *.dvi"
 alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
 alias ls="ls -Gl"
 alias d="~/dotfiles"
@@ -20,3 +20,7 @@ alias gco='git checkout'
 alias gf='git fetch'
 alias gc='git commit'
 
+#network in mac
+alias net_off='sudo networksetup -setairportpower en0 off'
+alias net_on='sudo networksetup -setairportpower en0 on'
+alias net_ssid='networksetup -setairportnetwork en0'

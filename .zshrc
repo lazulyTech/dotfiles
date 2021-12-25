@@ -13,7 +13,7 @@ source ${ZSHHOME}/00-options.zsh
 source ${ZSHHOME}/10-path.zsh
 source ${ZSHHOME}/20-alias.zsh
 source ${ZSHHOME}/30-zinit.zsh
-source ${ZSHPRIVATE}/ssh_alias.zsh
+source ${ZSHPRIVATE}/zshrc_private.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -13,11 +13,15 @@ set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(s:dein_dir)
     call dein#begin(s:dein_dir)
     
-    "add setting files
-    call dein#load_toml(s:rc_dir.'/dein.toml',         {'lazy': 0})
-    call dein#load_toml(s:rc_dir.'/dein_likeide.toml', {'lazy': 1})
-"    call dein#load_toml(s:rc_dir.'/dein_latex.toml',   {'lazy': 1})
-
+    if has('nvim')
+        "add setting files
+        call dein#load_toml(g:vim_home.'/dein.toml',         {'lazy': 0})
+        call dein#load_toml(g:vim_home.'/dein_likeide.toml', {'lazy': 1})
+    "    call dein#load_toml(s:rc_dir.'/dein_latex.toml',   {'lazy': 1})
+    endif
+    if has('vim')
+        
+    endif
     call dein#end()
     call dein#save_state()
 endif

@@ -12,5 +12,6 @@
         "v": "open:vsplit"
     },
     "coc.preferences.formatOnType": false,
-    "diagnostic.displayByAle": true
+    "diagnostic.displayByAle": true//,
+    //"solargraph.commandPath": "~/.config/coc/extensions/node_modules/coc-solargraph"
 }
