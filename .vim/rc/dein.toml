@@ -2,12 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/deol.nvim'
-
-[[plugins]]
-repo = 'vim-denops/denops.vim'
-
-[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
@@ -36,7 +30,7 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'mhinz/vim-startify'
 hook_add = '''
-    source ~/.vim/rc/plugins/startify.rc.vim
+	source ~/.vim/rc/plugins/startify.rc.vim
 '''
 
 [[plugins]]
@@ -50,3 +44,49 @@ hook_add = '''
     highlight GitGutterDelete ctermfg=red
     highlight GitGutterChangeDelete ctermfg=yellow
 '''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+#marged = 0
+hook_add = '''
+	source ~/.vim/rc/plugins/coc.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+hook_add = '''
+	source ~/.vim/rc/plugins/snippet.rc.vim
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+hook_add = '''
+
+'''
+
+[[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = '''
+	source ~/.vim/rc/plugins/ale.rc.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+#hook_post_update = './install --all'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+	set rtp+=/opt/homebrew/opt/fzf
+	source ~/.vim/rc/plugins/fzf.rc.vim
+'''
+
