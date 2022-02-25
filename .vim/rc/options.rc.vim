@@ -58,10 +58,10 @@ endif
 
 set rtp+=/opt/homebrew/opt/fzf
 
-augroup vimrc
-	autocmd!
-	autocmd BufWritePost *.tex !pwd ; ptex2pdf -l *.tex ; open *.pdf -a /Applications/Skim.app/Contents/MacOS/Skim
-augroup END
+"augroup vimrc
+"	autocmd!
+"	autocmd BufWritePost *.tex !pwd ; ptex2pdf -l *.tex ; open *.pdf -a /Applications/Skim.app/Contents/MacOS/Skim
+"augroup END
 
 "off IME if you leave insert mode
 if has('mac')

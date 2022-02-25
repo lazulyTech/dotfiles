@@ -92,3 +92,4 @@ export PATH="$HOME/bin:$PATH"
 
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
+export PATH=$PATH:~/.platformio/penv/bin
