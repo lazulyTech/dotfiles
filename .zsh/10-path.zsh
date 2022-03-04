@@ -92,4 +92,5 @@ export PATH="$HOME/bin:$PATH"
 
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
-export PATH=$PATH:~/.platformio/penv/bin
+export PATH="$PATH:$HOME/.platformio/penv/bin"
+# export PATH="$HOME/.local/share/nvim/lsp_servers/bin:$PATH"
