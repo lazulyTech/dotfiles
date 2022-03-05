@@ -37,13 +37,15 @@ export LDFLAGS="-L/opt/homebrew/opt/curl/lib:$LDFLAGS"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include:$CPPFLAGS"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-export C_INCLUDE_PATH=/usr/local/include
-export CPLUS_INCLUDE_PATH=/usr/local/include
+export C_INCLUDE_PATH="/usr/local/include"
+export CPLUS_INCLUDE_PATH="/usr/local/include"
 
 export PATH="/usr/local/bin:$PATH"
 
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include:$CPPFLAGS"
+
+#export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 #rbenv settings
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
