@@ -23,7 +23,7 @@ call ddc#custom#patch_global(
     \   },
     \ })
 
-call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim'],
+call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim', 'html'],
     \ 'sources', [
     \   'nvim-lsp',
     \   'file',
@@ -31,7 +31,7 @@ call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'v
     \ ],
     \ 'completionMenu', 'pum.vim',
     \ )
-call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim'],
+call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim', 'html'],
     \ 'sourceOptions', {
     \   '_': {
     \     'matchers': ['matcher_head'],

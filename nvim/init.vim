@@ -11,6 +11,7 @@ call jetpack#begin()
     call jetpack#add('tomasr/molokai')
     call jetpack#add('ryanoasis/vim-devicons')
     call jetpack#add('mhinz/vim-startify')
+    call jetpack#add('airblade/vim-gitgutter')
     call jetpack#add('nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'})
 
     " Parentheses Completion
