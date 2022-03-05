@@ -42,6 +42,8 @@ call jetpack#end()
 
 " vim-airline Setting
 source ~/dotfiles/nvim/plugins/airline.rc.vim
+" vim-startify Setting
+source ~/dotfiles/nvim/plugins/startify.rc.vim
 " nvim-treesitter Setting
 source ~/dotfiles/nvim/plugins/treesitter.rc.vim
 " lexima.vim Setting

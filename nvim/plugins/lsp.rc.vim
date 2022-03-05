@@ -1,29 +1,19 @@
 lua << EOF
 
-    -- nvim-lspconfig Settings
-    local nvim_lsp = require('lspconfig')
-    local on_attach = function (client, bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-    
-    local opts = { noremap=true, silent=true }
-        buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-        buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-        buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-        buf_set_keymap('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-        buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-        buf_set_keymap('n', 'gx', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-        buf_set_keymap('n', 'g[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-        buf_set_keymap('n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-    end
-    
-    -- nvim-lsp-installer Settings
     local lsp_installer = require("nvim-lsp-installer")
+
+    -- Register a handler that will be called for each installed server when it's ready (i.e. when installation is finished
+    -- or if the server is already installed).
     lsp_installer.on_server_ready(function(server)
         local opts = {}
-        opts.on_attach = on_attach
+--        if server.name == "arduino_language_server" then
+--            opts.on_new_config = function (config, root_dir)
+--                local partial_cmd = server:get_default_options().cmd
+--                local MY_FQBN = "arduino:avr:nano"
+--                config.cmd = vim.list_extend(partial_cmd, { "-fqbn", MY_FQBN })
+--            end
+--        end
         server:setup(opts)
-        vim.cmd [[ do User LspAttachBuffers ]]
     end)
 
 EOF
