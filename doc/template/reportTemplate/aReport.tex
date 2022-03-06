@@ -1,15 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% レポートテンプレート
-%
-% updated 22 Oct, 2018
-% last updated 02 Apr, 2021
-%
-% (c) Tohru TAKADA@UEC
-% 各自のレポートに合わせて変更して使ってください．上記の行は残して使うこと．
-% 2次配布可です．ご利用は計画的に．
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[dvipdfmx,a4paper,10pt]{jarticle}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -30,9 +18,9 @@
 \newcommand{\PS}{{\scshape Post\-Script}}
 \def\BibTeX{{\rmfamily B\kern-.05em{\scshape i\kern-.025em b}\kern-.08em
  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
-\newcommand{\pderiv}[2]{{\partial#1\over\partial#2}}
-\newcommand{\deriv}[2]{{{\rm d}#1\over{\rm d}#2}}
-\newcommand{\dderiv}[2]{{{\rm d}^2#1\over{\rm d}#2^2}}
+% \newcommand{\pderiv}[2]{{\partial#1\over\partial#2}}
+% \newcommand{\deriv}[2]{{{\rm d}#1\over{\rm d}#2}}
+% \newcommand{\dderiv}[2]{{{\rm d}^2#1\over{\rm d}#2^2}}
 \newcommand{\DeLta}{{\mit\Delta}}
 \renewcommand{\d}{{\rm d}}
 \def\wcaption#1{\caption[]{\parbox[t]{100mm}{#1}}}
@@ -57,54 +45,47 @@
 }
 \makeatother
 
-% 1行数式はequation
-% 複数行はeqnarray
-% \deriv は1階微分演算子
-% \dderiv は2階微分演算子
-% 下に注で書くときは\footnote{}
-% 箇条書きはenumerate \setlength{\itemsep}{-2mm} \item ...
-
 \begin{document}
-	\begin{center}
-		{\Large{\bf レポートタイトル}} \\
-		{\bf 電気通信大学 1年\\
-		2110000 氏名} \\
-		{\bf \number\year 年\number\month 月\number\day 日 作成} \\
-		{\bf \number\year 年\number\month 月\number\day 日更新}
-	\end{center}
-	
-	\section{実験の目的}
-	
-	\section{実験の原理}
+    \begin{center}
+        {\Large{\bf レポートタイトル}} \\
+        {\bf 電気通信大学 1年\\
+        2110000 氏名} \\
+        {\bf \number\year 年\number\month 月\number\day 日 作成} \\
+        {\bf \number\year 年\number\month 月\number\day 日更新}
+    \end{center}
+    
+    \section{実験の目的}
+    
+    \section{実験の原理}
 
-	\section{実験方法}
-	
-	\section{実験結果}
+    \section{実験方法}
+    
+    \section{実験結果}
 
-	\section{考察}
-	
-	\section{感想}
+    \section{考察}
+    
+    \section{感想}
 
-	%参考文献
-	\begin{thebibliography}{99}
-		\bibitem{bi:1} これこれ
-	\end{thebibliography}
-	
-	
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\appendix
-	\setcounter{figure}{0}
-	\setcounter{table}{0}
-	\numberwithin{equation}{section}
-	\renewcommand{\thetable}{\Alph{section}\arabic{table}}
-	\renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
-	%\def\thesection{付録\Alph{section}}
-	\makeatletter 
-	\newcommand{\section@cntformat}{付録 \thesection:\ }
-	\makeatother
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	
-	\section{付録}
-	
+    %参考文献
+    \begin{thebibliography}{99}
+        \bibitem{bi:1} これこれ
+    \end{thebibliography}
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \appendix
+    \setcounter{figure}{0}
+    \setcounter{table}{0}
+    \numberwithin{equation}{section}
+    \renewcommand{\thetable}{\Alph{section}\arabic{table}}
+    \renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
+    %\def\thesection{付録\Alph{section}}
+    \makeatletter 
+    \newcommand{\section@cntformat}{付録 \thesection:\ }
+    \makeatother
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \section{付録}
+    
 \end{document}
 
