@@ -11,8 +11,16 @@ call jetpack#begin()
     call jetpack#add('tomasr/molokai')
     call jetpack#add('ryanoasis/vim-devicons')
     call jetpack#add('mhinz/vim-startify')
-    call jetpack#add('airblade/vim-gitgutter')
+
+    " Syntax
     call jetpack#add('nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'})
+
+    " Translating Documents
+    call jetpack#add('skanehira/translate.vim')
+
+    " Help Git
+    call jetpack#add('airblade/vim-gitgutter')
+    call jetpack#add('tpope/vim-fugitive')
 
     " Parentheses Completion
     call jetpack#add('cohama/lexima.vim')
@@ -20,15 +28,15 @@ call jetpack#begin()
     " Completion
     call jetpack#add('vim-denops/denops.vim')
     call jetpack#add('Shougo/ddc.vim', {'depends': 'denops.vim'})
-    " ddc-sources
-    call jetpack#add('Shougo/ddc-nvim-lsp')
-    call jetpack#add('Shougo/pum.vim')
-    " ddc-filters
-    call jetpack#add('Shougo/ddc-around')
-    call jetpack#add('Shougo/ddc-matcher_head')
-    call jetpack#add('Shougo/ddc-sorter_rank')
-    call jetpack#add('Shougo/ddc-converter_remove_overlap')
-    call jetpack#add('LumaKernel/ddc-file')
+        " ddc-sources
+        call jetpack#add('Shougo/ddc-nvim-lsp')
+        call jetpack#add('Shougo/pum.vim')
+        " ddc-filters
+        call jetpack#add('Shougo/ddc-around')
+        call jetpack#add('Shougo/ddc-matcher_head')
+        call jetpack#add('Shougo/ddc-sorter_rank')
+        call jetpack#add('Shougo/ddc-converter_remove_overlap')
+        call jetpack#add('LumaKernel/ddc-file')
 
     " Neovim Builtin LSP
     call jetpack#add('neovim/nvim-lspconfig')
@@ -47,6 +55,8 @@ source ~/dotfiles/nvim/plugins/airline.rc.vim
 source ~/dotfiles/nvim/plugins/startify.rc.vim
 " nvim-treesitter Setting
 source ~/dotfiles/nvim/plugins/treesitter.rc.vim
+" translate.vim Setting
+source ~/dotfiles/nvim/plugins/translate.rc.vim
 " lexima.vim Setting
 source ~/dotfiles/nvim/plugins/lexima.rc.vim
 " ddc.vim Setting

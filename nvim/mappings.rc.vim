@@ -9,12 +9,6 @@ set completeopt=menuone,noinsert,noselect
 set hlsearch
 nnoremap <silent> <Esc><Esc> :<C-u>nohlsearch<CR>
 
-""sprit window
-"nnoremap sj <C-w>j
-"nnoremap sk <C-w>k
-"nnoremap sl <C-w>l
-"nnoremap sh <C-w>h
-"nnoremap ss :<C-u>sp<CR><C-w>j
-"nnoremap sv :<C-u>vs<CR><C-w>l
-
+set shell=/opt/homebrew/bin/zsh
+tnoremap <Esc><Esc> <C-\><C-n>
 

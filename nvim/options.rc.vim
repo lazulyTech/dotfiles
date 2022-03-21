@@ -48,7 +48,12 @@ set updatetime=300
 
 set shortmess+=c
 
-let g:python3_host_prog = '~/.virtualenvs/deps3/bin/python3'
+let g:python3_host_prog = expand('~/.virtualenvs/deps3/bin/python3')
+
+let g:session_path = expand('~/dotfiles/nvim/sessions')
+if !isdirectory(g:session_path)
+    call mkdir(g:session_path, "p")
+endif
 
 if has("patch-8.1.1564")
     set signcolumn=number
