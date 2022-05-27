@@ -5,6 +5,7 @@
 \usepackage{multirow}
 \usepackage{url}
 \usepackage[separate-uncertainty]{siunitx}
+\usepackage{physics}
 \usepackage{pdfpages}
 \setlength{\textwidth}{165mm} %165mm-marginparwidth
 \setlength{\marginparwidth}{40mm}
@@ -18,9 +19,6 @@
 \newcommand{\PS}{{\scshape Post\-Script}}
 \def\BibTeX{{\rmfamily B\kern-.05em{\scshape i\kern-.025em b}\kern-.08em
  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
-% \newcommand{\pderiv}[2]{{\partial#1\over\partial#2}}
-% \newcommand{\deriv}[2]{{{\rm d}#1\over{\rm d}#2}}
-% \newcommand{\dderiv}[2]{{{\rm d}^2#1\over{\rm d}#2^2}}
 \newcommand{\DeLta}{{\mit\Delta}}
 \renewcommand{\d}{{\rm d}}
 \def\wcaption#1{\caption[]{\parbox[t]{100mm}{#1}}}
@@ -44,6 +42,9 @@
    {\csname #1@cntformat\endcsname}%    enable individual control
 }
 \makeatother
+
+\newcommand{\tenexp}[2]{#1\times10^{#2}}
+
 
 \begin{document}
     \begin{center}
