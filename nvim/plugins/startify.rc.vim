@@ -1,19 +1,18 @@
 let g:startify_files_number = 5
 let g:startify_list_order = [
+    \ ['Commands'],
+    \ 'commands',
     \ ['♻  File from Current Dir:'],
     \ 'dir',
     \ ['⚑  Session:'],
     \ 'sessions',
-    \ ['Commands'],
-    \ 'commands',
     \ ['  BookMarks:'],
     \ 'bookmarks',
     \ ]
 
 let g:startify_commands = [
-    \ 'E',
+    \ 'call ddu#start({})',
     \ 'JetpackSync',
-    \ 'TSUpdate',
     \ 'source $MYVIMRC',
     \ 'checkhealth',
     \ ]

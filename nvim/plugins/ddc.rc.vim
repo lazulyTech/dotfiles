@@ -14,6 +14,7 @@ call ddc#custom#patch_global(
     \     'matchers': ['matcher_head'],
     \     'sorters': ['sorter_rank'],
     \     'converters': ['converter_remove_overlap'],
+    \     'minAutoCompleteLength': 1
     \   },
     \   'around': {'mark': 'Around'},
     \   'file': {
@@ -34,8 +35,9 @@ call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'v
 call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim', 'html'],
     \ 'sourceOptions', {
     \   '_': {
-    \     'matchers': ['matcher_head'],
-    \     'sorters': ['sorter_rank'],
+    \     'matchers': ['matcher_fuzzy'],
+    \     'sorters': ['sorter_fuzzy'],
+    \     'converters': ['converter_fuzzy']
     \   },
     \   'nvim-lsp': {
     \     'mark': 'Lsp',
