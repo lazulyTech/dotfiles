@@ -47,6 +47,8 @@ call jetpack#begin()
     " Completion
     call jetpack#add('vim-denops/denops.vim')
     call jetpack#add('Shougo/ddc.vim', {'depends': 'denops.vim'})
+        " ddc-ui
+        call jetpack#add('Shougo/ddc-ui-native')
         " ddc-sources
         call jetpack#add('Shougo/ddc-nvim-lsp')
         call jetpack#add('Shougo/pum.vim')
@@ -60,7 +62,9 @@ call jetpack#begin()
 
     " Neovim Builtin LSP
     call jetpack#add('neovim/nvim-lspconfig')
-    call jetpack#add('williamboman/nvim-lsp-installer')
+    " call jetpack#add('williamboman/nvim-lsp-installer')
+    call jetpack#add('williamboman/mason.nvim')
+    call jetpack#add('williamboman/mason-lspconfig.nvim')
 
     " Snippet
     call jetpack#add('hrsh7th/vim-vsnip')

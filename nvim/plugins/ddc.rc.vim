@@ -1,10 +1,10 @@
 " ddc settings (global)
 " call ddc#custom#patch_global('completionMenu', 'pum.vim')
+call ddc#custom#patch_global('ui', 'native')
 call ddc#custom#patch_global(
     \ 'sources', [
     \   'around',
     \   'file',
-    \   'vsnip',
     \ ],
     \ 'completionMenu', 'pum.vim',
     \ )
@@ -14,17 +14,41 @@ call ddc#custom#patch_global(
     \     'matchers': ['matcher_head'],
     \     'sorters': ['sorter_rank'],
     \     'converters': ['converter_remove_overlap'],
-    \     'minAutoCompleteLength': 1
+    \     'minAutoCompleteLength': 2
     \   },
-    \   'around': {'mark': 'Around'},
+    \   'around': {'mark': '[A]'},
     \   'file': {
-    \     'mark': 'File',
+    \     'mark': '[F]',
     \     'isVolatile': v:true, 
     \     'forceCompletionPattern': '\S/\S*'
     \   },
     \ })
 
-call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim', 'html'],
+call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
+    \ 'sources', [
+    \   'nvim-lsp',
+    \   'vsnip',
+    \ ],
+    \ 'completionMenu', 'pum.vim',
+    \ )
+call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
+    \ 'sourceOptions', {
+    \   '_': {
+    \     'matchers': ['matcher_fuzzy'],
+    \     'sorters': ['sorter_fuzzy'],
+    \     'converters': ['converter_fuzzy'],
+    \     'minAutoCompleteLength': 2
+    \   },
+    \   'nvim-lsp': {
+    \     'mark': '[L]',
+    \     'forceCompletionPattern': '\.\w*|:\w*|->\w*'
+    \   },
+    \   'vsnip': {
+    \     'mark': '[S]',
+    \   }
+    \ })
+
+call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
     \ 'sources', [
     \   'nvim-lsp',
     \   'file',
@@ -32,7 +56,7 @@ call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'v
     \ ],
     \ 'completionMenu', 'pum.vim',
     \ )
-call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'vim', 'html'],
+call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
     \ 'sourceOptions', {
     \   '_': {
     \     'matchers': ['matcher_fuzzy'],
@@ -40,30 +64,33 @@ call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'tex', 'python', 'ruby', 'v
     \     'converters': ['converter_fuzzy']
     \   },
     \   'nvim-lsp': {
-    \     'mark': 'Lsp',
+    \     'mark': '[L]',
     \     'forceCompletionPattern': '\.\w*|:\w*|->\w*'
     \   },
     \   'file': {
-    \     'mark': 'File',
+    \     'mark': '[F]',
     \     'isVolatile': v:true, 
     \     'forceCompletionPattern': '\S/\S*'
     \   },
+    \   'vsnip': {
+    \     'mark': '[S]',
+    \   }
     \ })
 
 " ddc.vim Keybinds
 " <Tab>: completion.
 inoremap <silent><expr> <Tab>
-    \ ddc#map#pum_visible() ? '<C-n>' :
+    \ pumvisible() ? '<C-n>' :
     \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
     \ '<Tab>' : ddc#map#manual_complete()
 " <S-Tab>: completion back.
-inoremap <expr><S-Tab>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
+inoremap <expr><S-Tab>  pumvisible() ? '<C-p>' : '<C-h>'
 
 call ddc#enable()
 
 " vim-vsnip Keybinds
 " Expand
-imap <expr> <CR>    vsnip#expandable()  ? '<Plug>(vsnip-expand)' : ddc#map#pum_visible() ? '<C-y>' : '<CR>'
+imap <expr> <CR>    vsnip#expandable()  ? '<Plug>(vsnip-expand)' : pumvisible() ? '<C-y>' : '<CR>'
 smap <expr> <CR>    vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<CR>'
 " Jump forward or backward
 imap <expr> <C-f>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<C-f>'
