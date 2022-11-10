@@ -37,21 +37,16 @@ call jetpack#begin()
     " Parentheses Completion
     call jetpack#add('cohama/lexima.vim')
 
-"    " ddu.vim
-"    call jetpack#add('Shougo/ddu.vim')
-"        call jetpack#add('Shougo/ddu-ui-ff')
-"        call jetpack#add('Shougo/ddu-kind-file')
-"        call jetpack#add('Shougo/ddu-source-file_rec')
-"        call jetpack#add('Shougo/ddu-filter-matcher_substring')
-
     " Completion
     call jetpack#add('vim-denops/denops.vim')
     call jetpack#add('Shougo/ddc.vim', {'depends': 'denops.vim'})
         " ddc-ui
         call jetpack#add('Shougo/ddc-ui-native')
+        call jetpack#add('Shougo/ddc-ui-pum')
         " ddc-sources
-        call jetpack#add('Shougo/ddc-nvim-lsp')
+        call jetpack#add('Shougo/ddc-source-nvim-lsp')
         call jetpack#add('Shougo/pum.vim')
+        call jetpack#add('Shougo/ddc-source-cmdline-history')
         " ddc-filters
         call jetpack#add('Shougo/ddc-around')
         call jetpack#add('Shougo/ddc-matcher_head')

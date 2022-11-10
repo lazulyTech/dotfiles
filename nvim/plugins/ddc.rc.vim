@@ -5,6 +5,7 @@ call ddc#custom#patch_global(
     \ 'sources', [
     \   'around',
     \   'file',
+    \   'cmdline-history',
     \ ],
     \ 'completionMenu', 'pum.vim',
     \ )
@@ -22,6 +23,7 @@ call ddc#custom#patch_global(
     \     'isVolatile': v:true, 
     \     'forceCompletionPattern': '\S/\S*'
     \   },
+    \   'cmdline-history': {'mark': 'history'},
     \ })
 
 call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
