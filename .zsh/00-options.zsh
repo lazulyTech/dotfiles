@@ -9,7 +9,7 @@ setopt share_history
 
 ## cdなしでcd，その後自動でls
 setopt auto_cd
-function chpwd() { ls -Gl }
+function chpwd() #{ ls -Gl }
 
 ## 環境変数を補完
 setopt AUTO_PARAM_KEYS

@@ -1,14 +1,12 @@
 " ddc settings (global)
-" call ddc#custom#patch_global('completionMenu', 'pum.vim')
 call ddc#custom#patch_global('ui', 'native')
+" call ddc#custom#patch_global('completionMenu', 'pum.vim')
 call ddc#custom#patch_global(
     \ 'sources', [
     \   'around',
     \   'file',
     \   'cmdline-history',
-    \ ],
-    \ 'completionMenu', 'pum.vim',
-    \ )
+    \ ])
 call ddc#custom#patch_global(
     \ 'sourceOptions', {
     \   '_': {
@@ -28,11 +26,12 @@ call ddc#custom#patch_global(
 
 call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
     \ 'sources', [
-    \   'nvim-lsp',
     \   'vsnip',
-    \ ],
-    \ 'completionMenu', 'pum.vim',
-    \ )
+    \   'nvim-lsp',
+    \ ])
+" call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
+"     \ 'completionMenu', 'pum.vim'
+"     \ )
 call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
     \ 'sourceOptions', {
     \   '_': {
@@ -41,29 +40,33 @@ call ddc#custom#patch_filetype(['c', 'cpp', 'cmake', 'python', 'ruby'],
     \     'converters': ['converter_fuzzy'],
     \     'minAutoCompleteLength': 2
     \   },
+    \   'vsnip': {
+    \     'mark': '[S]',
+    \   },
     \   'nvim-lsp': {
     \     'mark': '[L]',
     \     'forceCompletionPattern': '\.\w*|:\w*|->\w*'
     \   },
-    \   'vsnip': {
-    \     'mark': '[S]',
-    \   }
     \ })
 
 call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
     \ 'sources', [
+    \   'vsnip',
     \   'nvim-lsp',
     \   'file',
-    \   'vsnip',
-    \ ],
-    \ 'completionMenu', 'pum.vim',
-    \ )
+    \ ])
+" call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
+"     \ 'completionMenu', 'pum.vim'
+"     \ )
 call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
     \ 'sourceOptions', {
     \   '_': {
     \     'matchers': ['matcher_fuzzy'],
     \     'sorters': ['sorter_fuzzy'],
     \     'converters': ['converter_fuzzy']
+    \   },
+    \   'vsnip': {
+    \     'mark': '[S]',
     \   },
     \   'nvim-lsp': {
     \     'mark': '[L]',
@@ -74,9 +77,6 @@ call ddc#custom#patch_filetype(['tex', 'vim', 'html'],
     \     'isVolatile': v:true, 
     \     'forceCompletionPattern': '\S/\S*'
     \   },
-    \   'vsnip': {
-    \     'mark': '[S]',
-    \   }
     \ })
 
 " ddc.vim Keybinds

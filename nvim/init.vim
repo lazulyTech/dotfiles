@@ -24,6 +24,7 @@ call jetpack#begin()
     " call jetpack#add('lambdalisue/fern-mapping-git.vim')
     " Syntax
 "    call jetpack#add('nvim-treesitter/nvim-treesitter', {'do': 'TSUpdate'})
+    call jetpack#add('wilriker/gcode.vim')
     call jetpack#add('sheerun/vim-polyglot')
     call jetpack#add('tpope/vim-commentary')
 
@@ -46,6 +47,7 @@ call jetpack#begin()
         " ddc-sources
         call jetpack#add('Shougo/ddc-source-nvim-lsp')
         call jetpack#add('Shougo/pum.vim')
+        call jetpack#add('uga-rosa/ddc-source-vsnip')
         call jetpack#add('Shougo/ddc-source-cmdline-history')
         " ddc-filters
         call jetpack#add('Shougo/ddc-around')
@@ -60,13 +62,19 @@ call jetpack#begin()
     " call jetpack#add('williamboman/nvim-lsp-installer')
     call jetpack#add('williamboman/mason.nvim')
     call jetpack#add('williamboman/mason-lspconfig.nvim')
+    call jetpack#add('mason-org/mason-registry')
 
     " Snippet
     call jetpack#add('hrsh7th/vim-vsnip')
-    call jetpack#add('hrsh7th/vim-vsnip-integ')
+    " call jetpack#add('hrsh7th/vim-vsnip-integ')
     call jetpack#add('rafamadriz/friendly-snippets')
 
     call jetpack#add('twitvim/twitvim')
+    call jetpack#add('gpanders/editorconfig.nvim')
+    call jetpack#add('lambdalisue/butler.vim')
+    call jetpack#add('skanehira/denops-openai.vim')
+
+    call jetpack#add('vim-scripts/TeTrIs.vim')
 
 call jetpack#end()
 
@@ -86,6 +94,6 @@ source ~/dotfiles/nvim/plugins/ddu.rc.vim
 source ~/dotfiles/nvim/plugins/ddc.rc.vim
 " LSP Setting
 source ~/dotfiles/nvim/plugins/lsp.rc.vim
-" twitvim Setting
-source ~/dotfiles/nvim/plugins/twitvim.rc.vim
+" OpenAI Setting
+source ~/.dotfiles_private/nvim/plugins/openaiChat.rc.vim
 

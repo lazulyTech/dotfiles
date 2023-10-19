@@ -1,12 +1,15 @@
-alias jxa="osascript -l JavaScript"
-#alias python="python3"
-alias ntex="nvim *.tex"
-alias jbtex="platex *.tex ; dvipdfmx -V4 *.dvi"
-alias skim="open -a /Applications/Skim.app/Contents/MacOS/Skim"
-alias ls="ls -Gl"
-alias d="~/dotfiles"
-alias cl="clear"
-alias so="source ~/.zshrc"
+alias jxa='osascript -l JavaScript'
+#alias python='python3'
+alias ntex='nvim *.tex'
+alias jbtex='platex *.tex ; dvipdfmx -V4 *.dvi'
+alias texcpl='(){uplatex $1.tex ; dvipdfmx $1.dvi}'
+alias skim='open -a /Applications/Skim.app'
+alias arduino='open -a /Applications/Arduino.app'
+alias python='python3'
+alias ls='ls -Gl'
+alias d='~/dotfiles'
+alias cl='clear'
+alias so='source ~/.zshrc'
 
 #git alias
 alias g='git'
