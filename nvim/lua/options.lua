@@ -35,7 +35,7 @@ local options = {
     relativenumber = false,
     numberwidth = 4,
     signcolumn = "yes",
-    wrap = false,
+    wrap = true,
     winblend = 0,
     wildoptions = "pum",
     pumblend = 5,
@@ -45,7 +45,7 @@ local options = {
     splitbelow = false, -- オンのとき、ウィンドウを横分割すると新しいウィンドウはカレントウィンドウの下に開かれる
     splitright = false, -- オンのとき、ウィンドウを縦分割すると新しいウィンドウはカレントウィンドウの右に開かれる
     list = true,
-    listchars = {tab=">-", trail="."},
+    listchars = {tab=">-", trail="_"},
 }
 
 vim.opt.shortmess:append("c")

@@ -42,7 +42,11 @@ require("lazy").setup({
     },
     {"folke/noice.nvim",
         event = "VeryLazy",
-        opts = {},
+        opts = {
+            messages = {
+                view = "mini",
+            },
+        },
         dependencies = {
             "MunifTanjim/nui.nvim",
             {"rcarriga/nvim-notify",
