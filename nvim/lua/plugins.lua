@@ -64,6 +64,7 @@ require("lazy").setup({
             require("after.treesitter_rc")
         end
     },
+
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
@@ -86,6 +87,20 @@ require("lazy").setup({
             require("after.cmp_rc")
         end
     },
+
+    {"nvim-telescope/telescope.nvim",
+        tag = "0.1.5",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        config = function ()
+            require("after.telescope_rc")
+        end
+    },
+    {"nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+    },
+
     {"nvimdev/lspsaga.nvim",
         event = "LspAttach",
         config = function ()
@@ -107,8 +122,15 @@ require("lazy").setup({
         end
     },
     {"windwp/nvim-autopairs",
+        enabled = true,
         event = "InsertEnter",
         opts = {} -- this is equalent to setup({}) function
+    },
+    {"cohama/lexima.vim",
+        enabled = false,
+    },
+    {"ixru/nvim-markdown"
+        
     },
     {'numToStr/Comment.nvim',
         opts = {
