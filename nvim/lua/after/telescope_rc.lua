@@ -1,9 +1,11 @@
--- local builtin = require('telescope.builtin')
--- vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
--- vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
--- vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
--- vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
---
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fB', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+-- vim.keymap.set('n', '<leader>fb', ":Telescope file_browser<CR>", {})
+vim.keymap.set('n', '<leader>fb', ":Telescope file_browser<CR>", {})
+
 require('telescope').setup{
     defaults = {
         -- Default configuration for telescope goes here:
@@ -56,8 +58,20 @@ require('telescope').setup{
             override_file_sorter = true,
             case_mode = "smart_case",
         },
+        file_browser = {
+            theme = "ivy",
+            hijack_netrw = {
+                ["i"] = {
+                    -- insert mode mappings
+                },
+                ["n"] = {
+                    -- normal mode mappings
+                },
+            },
+        },
     }
 }
 
 require("telescope").load_extension("fzf")
+require("telescope").load_extension("file_browser")
 

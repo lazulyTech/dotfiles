@@ -25,7 +25,7 @@ local options = {
     guifont = "FiraCode Nerd Font Mono",
     timeoutlen = 300,
     undofile = true,
-    updatetime = 300,
+    updatetime = 750,
     writebackup = false,
     expandtab = true,
     shiftwidth = 4,
@@ -60,20 +60,4 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
         vim.api.nvim_exec('silent! normal! g`"zv', false)
     end,
 })
-
-if {vim.cmd "if has('mac')"} then
-    vim.api.nvim_create_augroup("MyIMEGroup",{})
-    vim.api.nvim_create_autocmd("insertleave",{
-        group = "MyIMEGroup",
---         callback = vim.fn.system('osascript -e "tell application \"System Events\" to key code 102"')
-        callback = function()
-            vim.fn.system({
-                "osascript",
-                "-e",
-                "tell application \"System Events\" to key code 102"
-            })
-        end
-    })
-
-end
 

@@ -18,11 +18,13 @@ require("lazy").setup({
             {"h", mode = "c",},
         }
     },
+    -- colorscheme
     "tomasr/molokai",
     {"nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons"},
     },
     {"nvim-tree/nvim-tree.lua",
+        enabled = false,
         config = function ()
             require("nvim-tree_rc")
         end
@@ -57,6 +59,7 @@ require("lazy").setup({
             -- require("after.noice_rc")
         -- end
     },
+    -- Syntax Highlight
     {"nvim-treesitter/nvim-treesitter",
         event = {"BufNewFile", "Bufread"},
         build = ":TSUpdate",
@@ -98,7 +101,24 @@ require("lazy").setup({
         end
     },
     {"nvim-telescope/telescope-fzf-native.nvim",
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim"
+        },
         build = "make",
+    },
+    {"nvim-telescope/telescope-file-browser.nvim",
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim"
+        },
+    },
+    {"sudormrfbin/cheatsheet.nvim",
+        dependencies = {
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/popup.nvim",
+            "nvim-lua/plenary.nvim"
+        },
     },
 
     {"nvimdev/lspsaga.nvim",
@@ -150,6 +170,17 @@ require("lazy").setup({
             },
         },
     },
+    {"keaising/im-select.nvim",
+        config = function ()
+            if vim.fn.has("mac") == 1 then
+                require("im_select").setup {
+                    default_im_select = "com.apple.keylayout.ABC",
+                    set_previous_events = {},
+                }
+            end
+        end
+    },
+
     {"skanehira/denops-translate.vim",
         dependencies = {"vim-denops/denops.vim"},
         config = function()

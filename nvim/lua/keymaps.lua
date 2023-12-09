@@ -14,10 +14,10 @@ map("n", "<Esc><Esc>", ":<C-u>set nohlsearch<Return>", opts)
 
 map("n", "<C-b>", ":bprev<Return>", opts)
 map("n", "<C-f>", ":bnext<Return>", opts)
--- vim.keymap.set('n', '<leader>sl', '<C-w>l')
--- vim.keymap.set('n', '<leader>sh', '<C-w>h')
--- vim.keymap.set('n', '<leader>sj', '<C-w>j')
--- vim.keymap.set('n', '<leader>sk', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
 
 -- vim-vsnip keymap
 vim.api.nvim_create_autocmd('InsertEnter', {
