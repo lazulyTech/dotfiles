@@ -101,3 +101,5 @@ export PATH="$PATH:$HOME/.platformio/penv/bin"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+eval "$(zoxide init zsh)"
+
