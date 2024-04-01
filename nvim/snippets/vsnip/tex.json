@@ -1,0 +1,82 @@
+{
+    "図~\\ref": {
+        "prefix": "figure:ref-jp",
+        "body": [
+            "図~\\ref{fig:$1}$0"
+        ]
+    },
+    "表~\\ref": {
+        "prefix": "table:ref-jp",
+        "body": [
+            "表~\\ref{tab:$1}$0"
+        ]
+    },
+    "式~\\ref": {
+        "prefix": "equation:ref-jp",
+        "body": [
+            "式~\\ref{eq:$1}$0"
+        ]
+    },
+    "Eqnarray": {
+        "prefix": "eqnarray",
+        "body": [
+            "\\begin{eqnarray}",
+            "\t$1",
+            "\\end{eqnarray}"
+        ],
+        "description": "Eqnarray"
+    },
+    "Figure:htbp": {
+        "prefix": "figure",
+        "body": [
+            "\\begin{figure}[htbp]",
+            "\t\\centering",
+            "\t\\includegraphics[width=${1:0.95}\\textwidth]{./figures/$2}",
+            "\t\\caption{$3}\\label{fig:$4}",
+            "\\end{figure}",
+            "$0"
+        ],
+        "description": "Add a figure[htbp]"
+    },
+    "Minipage(2)": {
+        "prefix": "mip",
+        "body": [
+            "\\begin{figure}[htbp]",
+            "\t\\begin{minipage}[b]{0.45\\linewidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=0.95\\textwidth]{./figures/$1}",
+            "\t\t\\caption{$2} \\label{fig:$3}",
+            "\t\\end{minipage}",
+            "\t\\begin{minipage}[b]{0.45\\linewidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=0.95\\textwidth]{./figures/$4}",
+            "\t\t\\caption{$5} \\label{fig:$6}",
+            "\t\\end{minipage}",
+            "\\end{figure}"
+        ],
+        "description": "2 figure by minipage"
+    },
+    "Minipage(3)": {
+        "prefix": "mip3",
+        "body": [
+            "\\begin{figure}[htbp]",
+            "\t\\begin{minipage}[b]{0.3\\linewidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=0.95\\textwidth]{./figures/$1}",
+            "\t\t\\caption{$2} \\label{fig:$3}",
+            "\t\\end{minipage}",
+            "\t\\begin{minipage}[b]{0.3\\linewidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=0.95\\textwidth]{./figures/$4}",
+            "\t\t\\caption{$5} \\label{fig:$6}",
+            "\t\\end{minipage}",
+            "\t\\begin{minipage}[b]{0.3\\linewidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=0.95\\textwidth]{./figures/$7}",
+            "\t\t\\caption{$8} \\label{fig:$9}",
+            "\t\\end{minipage}",
+            "\\end{figure}"
+        ],
+        "description": "3 figure by minipage"
+    }
+}

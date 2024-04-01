@@ -1,3 +1,5 @@
+vim.g.vsnip_snippet_dir = "$HOME/dotfiles/nvim/snippets/vsnip"
+
 local lspkind = require("lspkind")
 
 local cmp = require("cmp")
@@ -21,10 +23,10 @@ cmp.setup({
         ["<C-n>"] = cmp.mapping.select_next_item(),
         ['<C-l>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        ["<CR>"] = cmp.mapping.confirm({ select = false }),
     }),
     experimental = {
-        ghost_text = false,
+        ghost_text = true,
     },
 
     formatting = {
@@ -36,14 +38,14 @@ cmp.setup({
     }
 })
 
-cmp.setup.filetype({"markdown",},{
-    sources = {
-
-    },
-    window = {
-        documentation = cmp.config.disable
-    }
-})
+-- cmp.setup.filetype({"markdown",},{
+--     sources = {
+--
+--     },
+--     window = {
+--         documentation = cmp.config.disable
+--     }
+-- })
 
 cmp.setup.cmdline('/', {
     mapping = cmp.mapping.preset.cmdline(),
@@ -63,8 +65,8 @@ cmp.setup.cmdline(":", {
     },
 })
 
-local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-cmp.event:on(
-    "confirm_done",
-    cmp_autopairs.on_confirm_done()
-)
+-- local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+-- cmp.event:on(
+--     "confirm_done",
+--     cmp_autopairs.on_confirm_done()
+-- )

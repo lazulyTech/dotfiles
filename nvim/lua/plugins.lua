@@ -20,8 +20,19 @@ require("lazy").setup({
     },
     -- colorscheme
     "tomasr/molokai",
+    "nvim-tree/nvim-web-devicons",
     {"nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons"},
+        -- enabled = false,
+        -- dependencies = { "nvim-tree/nvim-web-devicons"},
+        config = function ()
+            require("lualine_rc")
+        end
+    },
+    {"echasnovski/mini.nvim",
+        version = "0.11.0",
+        config = function ()
+            require("mini_rc")
+        end
     },
     {"nvim-tree/nvim-tree.lua",
         enabled = false,
@@ -36,6 +47,7 @@ require("lazy").setup({
         end
     },
     {"akinsho/bufferline.nvim",
+        enabled = false,
         version = "v4.*",
         dependencies = "nvim-tree/nvim-web-devicons",
         config = function()
@@ -136,23 +148,24 @@ require("lazy").setup({
         -- end
     },
     {"lukas-reineke/indent-blankline.nvim",
+        enabled = false,
         main = "ibl",
         config = function ()
             require("ibl_rc")
         end
     },
     {"windwp/nvim-autopairs",
-        enabled = true,
+        enabled = false,
         event = "InsertEnter",
         opts = {} -- this is equalent to setup({}) function
     },
     {"cohama/lexima.vim",
         enabled = false,
     },
-    {"ixru/nvim-markdown"
-        
+    {"ixru/nvim-markdown",
     },
     {'numToStr/Comment.nvim',
+        enabled = false,
         opts = {
             -- add any options here
         },
@@ -161,8 +174,30 @@ require("lazy").setup({
             -- require("Comment").setup()
         -- end
     },
+    {"HakonHarnes/img-clip.nvim",
+        event = "BufEnter",
+        opts = {
+            -- add options here
+            -- or leave it empty to use the default settings
+            tex = {
+                template = [[
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\textwidth]{$FILE_PATH}
+    \caption{$CURSOR}
+    \label{fig:$LABEL}
+\end{figure}
+                ]],
+            },
+        },
+        keys = {
+            -- suggested keymap
+            { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste clipboard image" },
+        },
+    },
     {"pocco81/auto-save.nvim",
         opts = {
+            silent = true,
             trigger_events = {
                 "InsertLeave",
                 "BufLeave",
@@ -188,9 +223,23 @@ require("lazy").setup({
             vim.g.translate_source = "en"
         end,
     },
+
+    -- {"glebzlat/Arduino.nvim",
+    --     config = function ()
+    --         require("arduino-nvim").setup {
+    --             clangd = require 'mason-core.path'.bin_prefix 'clangd',
+    --             -- other settings
+    --         }
+    --         -- vim.api.nvim_create_autocmd('User', {
+    --         --     pattern = 'ArduinoFqbnReset',
+    --         --     callback = function()
+    --         --         vim.cmd('LspRestart')
+    --         --     end
+    --         -- })
+    --     end
+    -- },
 })
 
-require("lualine_rc")
 require("lspconfig_rc")
 -- require("ibl").setup{
     -- scope = {highlight = highlight}
