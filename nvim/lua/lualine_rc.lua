@@ -1,3 +1,19 @@
+-- Show skkeleton mode next to vim mode
+local function skkmode()
+    local mode = vim.fn['skkeleton#mode']()
+    if mode == '' then
+        return 'A'
+    elseif mode == 'hira' then
+        return 'あ'
+    elseif mode == 'kata' then
+        return 'ア'
+    elseif mode == 'hankata' then
+        return 'ｱ'
+    else
+        return mode
+    end
+end
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -18,7 +34,7 @@ require('lualine').setup {
     }
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {'mode', skkmode},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
@@ -26,7 +42,7 @@ require('lualine').setup {
     lualine_z = {'location'}
   },
   inactive_sections = {
-    lualine_a = {},
+    lualine_a = {'mode', skkmode},
     lualine_b = {},
     lualine_c = {'filename'},
     lualine_x = {'location'},
@@ -38,3 +54,4 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+

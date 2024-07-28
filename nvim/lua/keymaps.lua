@@ -19,10 +19,20 @@ vim.keymap.set('n', '<leader>h', '<C-w>h')
 vim.keymap.set('n', '<leader>j', '<C-w>j')
 vim.keymap.set('n', '<leader>k', '<C-w>k')
 
+
+-- vim.keymap.set({'i', 'c'}, '<C-j>', [[<Plug>(skkeleton-toggle)]], { expr = true, noremap = false })
+
 -- vim-vsnip keymap
 vim.api.nvim_create_autocmd('InsertEnter', {
     callback = function(ev)
-        vim.keymap.set({'i', 's'}, '<C-j>', function() return vim.fn['vsnip#expandable']() == 1 and '<Plug>(vsnip-expand)' or '<C-j>' end, { expr = true, noremap = false })
+        vim.keymap.set(
+            {'i', 's'}, '<C-j>',
+            function()
+                return vim.fn['vsnip#expandable']() == 1 and '<Plug>(vsnip-expand)'
+                    or '<Plug>(skkeleton-toggle)'
+            end,
+            { expr = true, noremap = false }
+        )
         vim.keymap.set({'i', 's'}, '<C-l>', function() return vim.fn['vsnip#available'](1) == 1 and '<Plug>(vsnip-expand-or-jump)' or '<C-l>' end, { expr = true, noremap = false })
         vim.keymap.set({'i', 's'}, '<Tab>', function() return vim.fn['vsnip#jumpable'](1) == 1 and '<Plug>(vsnip-jump-next)' or '<Tab>' end, { expr = true, noremap = false })
         vim.keymap.set({'i', 's'}, '<S-Tab>', function() return vim.fn['vsnip#jumpable'](-1) == 1 and '<Plug>(vsnip-jump-prev)' or '<S-Tab>' end, { expr = true, noremap = false })

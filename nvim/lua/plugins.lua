@@ -12,6 +12,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    {"vim-denops/denops.vim",
+        lazy = false,
+    },
     {"vim-jp/vimdoc-ja",
         lazy = true,
         keys = {
@@ -28,6 +31,7 @@ require("lazy").setup({
             require("lualine_rc")
         end
     },
+    -- styles
     {"echasnovski/mini.nvim",
         version = "0.11.0",
         config = function ()
@@ -71,6 +75,11 @@ require("lazy").setup({
             -- require("after.noice_rc")
         -- end
     },
+    {"lewis6991/gitsigns.nvim",
+        config = function ()
+            require("gitsigns").setup()
+        end
+    },
     -- Syntax Highlight
     {"nvim-treesitter/nvim-treesitter",
         event = {"BufNewFile", "Bufread"},
@@ -97,6 +106,7 @@ require("lazy").setup({
             "hrsh7th/cmp-vsnip", --スニペットを補完ソースに
             "hrsh7th/cmp-cmdline", --
             "onsails/lspkind.nvim", --補完欄にアイコンを表示
+            "rinx/cmp-skkeleton"
         },
         config = function()
             require("after.cmp_rc")
@@ -164,6 +174,13 @@ require("lazy").setup({
     },
     {"ixru/nvim-markdown",
     },
+    {'MeanderingProgrammer/markdown.nvim',
+        name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+        dependencies = { 'nvim-treesitter/nvim-treesitter' },
+        config = function()
+            require('render-markdown').setup({})
+        end,
+    },
     {'numToStr/Comment.nvim',
         enabled = false,
         opts = {
@@ -217,7 +234,6 @@ require("lazy").setup({
     },
 
     {"skanehira/denops-translate.vim",
-        dependencies = {"vim-denops/denops.vim"},
         config = function()
             vim.g.translate_target = "ja"
             vim.g.translate_source = "en"
@@ -238,9 +254,46 @@ require("lazy").setup({
     --         -- })
     --     end
     -- },
+
+    -- skkeleton setting from kat0h/dotfiles
+    {'vim-skk/skkeleton',
+        lazy = false,
+        dependencies = {
+          'vim-denops/denops.vim',
+        },
+        config = function()
+            vim.cmd [[
+            " skkeleten
+            " ==============================================================================
+            " if !filereadable(expand('~/.config/skk/SKK-JISYO.L'))
+                " call mkdir(expand('~/.config/skk'), 'p')
+                " call system('cd ~/.config/skk && wget http://openlab.jp/skk/dic/SKK-JISYO.L.gz && gzip -d SKK-JISYO.L.gz')
+            " endif
+            " imap <C-j> <Plug>(skkeleton-toggle)
+            cmap <C-j> <Plug>(skkeleton-toggle)
+            call skkeleton#config({
+                \ "globalDictionaries": [expand("~/.skk/SKK-JISYO.L")],
+                \ "eggLikeNewline": v:true,
+                \})
+
+            call skkeleton#register_kanatable('rom', {
+                \   ',': ['，', ''],
+                \   '.': ['．', ''],
+                \ })
+            ]]
+        end
+    },
+    {'delphinus/skkeleton_indicator.nvim',
+        dependencies = { 'vim-skk/skkeleton' },
+        event = "InsertEnter",
+        config = function()
+            require('skkeleton_indicator').setup {}
+        end
+    },
 })
 
 require("lspconfig_rc")
 -- require("ibl").setup{
     -- scope = {highlight = highlight}
 -- }
+

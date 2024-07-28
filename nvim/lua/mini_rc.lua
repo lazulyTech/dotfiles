@@ -1,5 +1,5 @@
 -- View
-require("mini.animate").setup()
+-- require("mini.animate").setup()
 require("mini.cursorword").setup()
 local hipatterns = require("mini.hipatterns")
 require("mini.hipatterns").setup({

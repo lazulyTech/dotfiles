@@ -16,6 +16,7 @@ cmp.setup({
         { name = "vsnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = "skkeleton"}
         -- { name = "cmdline" },
     },
     mapping = cmp.mapping.preset.insert({
@@ -35,7 +36,10 @@ cmp.setup({
             maxwidth = 50,
             ellipsis_char = '...',
         })
-    }
+    },
+    -- view = {
+    --     entries = 'native'
+    -- }
 })
 
 -- cmp.setup.filetype({"markdown",},{
@@ -70,3 +74,5 @@ cmp.setup.cmdline(":", {
 --     "confirm_done",
 --     cmp_autopairs.on_confirm_done()
 -- )
+
+-- vim.fn["skkeleton#config"](({ globalJisyo='~/.skk/SKK-JISYO.L' }))
